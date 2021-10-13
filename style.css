@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Spinnaker&display=swap');
+
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Spinnaker', sans-serif; */
+
+*{
+    box-sizing : border-box;
+    margin : 0;
+    padding: 0;
+    outline : none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.body-wrapper{
+    width : 100vw;
+    overflow-x : hidden;
+}
+
+section .section-heading{
+    font-size : 3rem;
+    font-family: 'Spinnaker', sans-serif;
+    color : #302b70;
+    font-weight: 500;
+    margin-bottom : 50px;
+}
+
+.span{
+    font-size : 0.9rem;
+    font-family: 'Spinnaker', sans-serif;
+    color : #302b70;
+    line-height: 1.5rem;
+}
+
+@keyframes imgchanger{
+    0% {
+        opacity:1;
+      }
+      17% {
+        opacity:1;
+      }
+      25% {
+        opacity:0;
+      }
+      92% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+}
+
+
+/* ========================= Navbar Start ============================ */
+nav{
+    height : 70px;
+    width : 100vw;
+    background-color :#302b70;
+    object-fit: contain;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 0 150px;
+    font-family: 'Spinnaker', sans-serif;
+    z-index : 1000;
+    position : sticky;
+    top : 0;
+    box-shadow: 0 0.5px 0.5px rgb(44, 43, 43);
+}
+
+.logo{
+    height : 60%;
+    width : auto;
+    position : relative;
+}
+
+.logo img{
+    position: absolute;
+    height : 100%;
+}
+
+.nav__link{
+    display : flex;
+    list-style: none;
+}
+
+.nav__link li{
+    padding : 10px 30px;
+
+}
+
+.nav__link li a{
+    color : white;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+.nav__link li a:hover,
+.nav__link li a.selected{
+    color : #F1A042;
+}
+
+/* ================================= Navbar End =================================== */
+
+
+/* ================================= Banner Start ====================================== */
+.banner{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    width : 100%;
+    height : 562px;
+    background: url("https://static.wixstatic.com/media/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.png/v1/fill/w_1279,h_592,al_c,q_95/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.webp") no-repeat center;
+    flex-wrap : wrap;
+}
+
+.banner > img{
+    position : absolute;
+    z-index : -1;
+}
+
+.banner__content{
+    display: flex;
+    align-items: flex-start;
+    justify-content :center;
+    width : 75%;
+}
+
+.bannerText *{
+    font-family: 'Poppins', sans-serif;
+    color : white;
+}
+
+.bannerText__top{
+    line-height : 4rem;
+}
+
+.bannerText__top{
+    margin-bottom : 40px;
+}
+
+.bannerText__top p{
+    font-size : 3rem;
+    font-weight: 500;
+}
+
+.bannerText__top span,
+.bannerText__bottom span{
+    font-size : 1.2rem;
+}
+
+.bannerText__bottom{
+    margin-top : 40px;
+}
+
+.bannerText__bottom p{
+    font-size : 2rem;
+}
+
+.bannerText__bottom span{
+    color : #302B70;
+}
+
+.storeText{
+    display : flex;
+    margin : 25px 0;
+}
+.storeText img{
+    margin-right : 10px;
+}
+
+.mobileImage{
+    margin-right : 300px;
+    margin-top: -50px;
+}
+
+.mobileImage img{
+    position : absolute;
+    animation-name: imgchanger;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+.mobileImage img:nth-child(1){
+    animation-delay: 6s;
+}
+
+.mobileImage img:nth-child(2){
+    animation-delay: 4s;
+}
+
+.mobileImage img:nth-child(3){
+    animation-delay: 2s;
+}
+
+.mobileImage img:nth-child(4){
+    animation-delay: 0  s;
+}
+/* ============================== Banner Ends ============================== */
+
+
+/* ================================== About Section Start ============================ */
+section.about{
+    display : flex;
+    justify-content: space-evenly;
+    padding-top : 100px;
+    flex-wrap: wrap;
+}
+
+.about .about-content{
+    max-width : 400px;
+}
+
+/* ================================== about section end =========================== */
+
+
+/* ==================================== Our Product section Start ============================= */
+section.our-product{
+    width: 100vw;
+    height: 964px;
+    background: url("https://static.wixstatic.com/media/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.png/v1/fill/w_1019,h_768,al_c,q_95/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.webp") no-repeat center center/cover;
+    padding : 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.our-product .section-heading{
+    color : white;
+    text-align : center;
+}
+
+section.our-product .span{
+    width : 500px;
+    text-align : center;
+    margin : -35px auto 0;
+    color : white;
+}
+
+section.our-product .img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 300px 0 250px;
+    position: relative;
+    width : 100vw;
+}
+
+section.our-product .img-wrapper > div {
+    width : 70%;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: imgchanger;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    position : absolute;
+}
+
+section.our-product .img-wrapper > div:nth-child(1){
+    animation-delay : 6s;
+}
+
+section.our-product .img-wrapper > div:nth-child(2){
+    animation-delay : 4s;
+}
+
+section.our-product .img-wrapper > div:nth-child(3){
+    animation-delay : 2s;
+}
+
+section.our-product .img-wrapper > div:nth-child(4){
+    animation-delay : 0s;
+}
+
+.our-product .bannerText__bottom span{
+    color : #787CD1;
+    text-align : center;
+    font-size: 16px;
+    font-family: 'Spinnaker', sans-serif;
+}
+
+.our-product .bannerText__bottom p{
+    font-family: 'Spinnaker', sans-serif;
+    text-align : center;
+    font-size: 24px;
+    margin-bottom: 12.5px;
+    color : white;
+}
+
+/* ====================================== Our Product Section End ================================== */
+
+
+/* =========================================== Why us Section Start =========================================== */
+section.whyUs {
+    width : 100%;
+    padding : 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.whyUs .section-heading{
+    text-align : center;
+}
+
+section.whyUs .content-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width : 80%;
+    margin-bottom: 50px;
+}
+
+.contentText{
+    width : 400px;
+    color : #302b70;
+}
+
+.contentText p{
+    font-size : 2rem;
+    font-family: 'Spinnaker', sans-serif;
+    font-weight: 500;
+    margin-bottom : 30px;
+    padding-bottom : 15px;
+    border-bottom : 2.5px solid #302b70;
+}
+
+.contentText span{
+    line-height: 1.5rem;
+}
+
+/* =========================================== Why US Section End ================================== */
+
+
+
+/* ============================================== Our Blog Section Start ============================================= */
+section.our-blog{
+    height : 702px;
+    width : 100vw;
+    background: url("https://static.wixstatic.com/media/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.png/v1/fill/w_1279,h_702,al_c,q_95/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.webp") no-repeat center center/cover;
+    padding : 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.our-blog .section-heading{
+    color : white;
+}
+
+section.our-blog .blog-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width : 85%;
+    flex-wrap: wrap;
+}
+
+section.our-blog .blog-section .card{
+    width : 292px;
+}
+
+section.our-blog .blog-section .card .card-content{
+    background : white;
+}
+
+section.our-blog .blog-section .card .card-content{
+    padding : 24px;
+    color : #303030;
+    font-family: 'Poppins', sans-serif;
+}
+
+section.our-blog .blog-section .card .card-content > p:nth-child(1){
+    margin : 15px 0;
+    font-size: 12px;
+}
+
+section.our-blog .blog-section .card .card-content > p:nth-child(2){
+    margin : 15px 0;
+    font-size: 20px;
+}
+
+section.our-blog .blog-section .card .card-content > p:nth-child(3){
+    font-size: 12px;
+}
+
+/* ========================================== blog End ================================== */
+
+
+/* ========================================== Footer Start ======================================== */
+footer{
+    width : 100%;
+    background-color :#302b70; 
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding : 100px;
+}
+
+footer h1{
+    color : white;
+    font-family: 'Spinnaker', sans-serif;
+    font-weight: 400;
+}
+
+@media(max-width : 990px){
+    nav{
+        padding : 0 20px;
+    }
+
+    .nav__link li{
+        padding : 10px;    
+    }
+    
+}
