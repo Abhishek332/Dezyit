@@ -109,9 +109,9 @@ nav{
     display : flex;
     align-items: center;
     justify-content: center;
-    width : 100%;
+    width : 100vw;
     height : 562px;
-    background: url("https://static.wixstatic.com/media/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.png/v1/fill/w_1279,h_592,al_c,q_95/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.webp") no-repeat center;
+    background: url("https://static.wixstatic.com/media/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.png/v1/fill/w_1279,h_592,al_c,q_95/ec9816_2eb87f9f47224104b16ec5e3cc468f59~mv2.webp") no-repeat center center/cover;
     flex-wrap : wrap;
 }
 
@@ -211,6 +211,7 @@ section.about{
 
 .about .about-content{
     max-width : 400px;
+    margin-bottom: 50px;
 }
 
 /* ================================== about section end =========================== */
@@ -297,7 +298,7 @@ section.our-product .img-wrapper > div:nth-child(4){
 /* =========================================== Why us Section Start =========================================== */
 section.whyUs {
     width : 100%;
-    padding : 70px;
+    padding : 70px 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -309,15 +310,16 @@ section.whyUs .section-heading{
 
 section.whyUs .content-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width : 100%;
+    margin-bottom: 40px;
     align-items: center;
-    width : 80%;
-    margin-bottom: 50px;
 }
 
 .contentText{
-    width : 400px;
+    min-width : 350px;
     color : #302b70;
+    flex : 1;
 }
 
 .contentText p{
@@ -331,6 +333,7 @@ section.whyUs .content-section{
 
 .contentText span{
     line-height: 1.5rem;
+    text-align: justify;
 }
 
 /* =========================================== Why US Section End ================================== */
@@ -394,27 +397,175 @@ section.our-blog .blog-section .card .card-content > p:nth-child(3){
 /* ========================================== Footer Start ======================================== */
 footer{
     width : 100%;
-    background-color :#302b70; 
+    background-color :#302b70;
     display : flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding : 100px;
+    padding : 100px 5%;
 }
 
 footer h1{
     color : white;
     font-family: 'Spinnaker', sans-serif;
     font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-@media(max-width : 990px){
+footer >div{
+    margin : 25px 0;
+    padding : 20px;
+}
+
+footer .reachus{
+    width :370px;
+}
+
+footer .reachus form {
+    width : 100%;
+    margin : 30px 0;
+}
+
+footer .reachus form input,
+footer .reachus form textarea{
+    width : 100%;
+    padding : 10px;
+    color : white;
+    border : none;
+    border-bottom : 1.5px solid white;
+    background-color: transparent;
+    margin : 5px;
+    outline : none;
+    font-family: 'Poppins', 'sans-serif';
+    resize : none;
+}
+
+footer .reachus form input:hover,
+footer .reachus form textarea:hover{
+    border-bottom : 2.5px solid white;
+}
+
+footer .reachus form textarea{
+    height : 150px;
+}
+
+footer .reachus form button{
+    padding : 3px 25px;
+    border : 1px solid white;
+    background-color: transparent;
+    color : white;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top : 15px;
+    float : right;
+    cursor : pointer;
+    transition: 0.4s;
+}
+
+footer .reachus form button:hover{
+    background-color: #787cd1;
+    border : 1px solid #787cd1;
+}
+
+footer .reachus form input::placeholder,
+footer .reachus form textarea::placeholder{
+    color : white;
+    text-transform: capitalize;
+}
+
+footer .about{
+    width : 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .about .button-wrapper button{
+    padding : 4px 40px;
+    width : 170px;
+    border : 1px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color : white;
+    font-size: 1rem;
+    margin : 10px 0;
+    transition: 0.5s;
+}
+
+footer .about .button-wrapper button:hover{
+    background-color: #787cd1;
+    border : 1px solid #787cd1;
+}
+
+footer .about .download-section{
+    margin-top : 130px;
+    width : 100%;
+}
+
+footer .about .download-section h1{
+    font-size: 24px;
+}
+
+footer .about .download-section > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .about .download-section > div img{
+    margin-right : 5px;
+}
+
+footer .contact span{
+    font-family: 'Spinnaker', sans-serif;
+    color : white;
+}
+
+footer .contact .icon-wrapper{
+    display : flex;
+    color : white;
+    margin : 15px 0;
+    font-size: 1.2rem;
+}
+
+footer .contact .icon-wrapper i{
+    margin-right : 15px;
+}
+
+footer .contact p{
+    font-family: 'Spinnaker', sans-serif;
+    color : white;
+    font-size: 0.9rem;
+}
+
+@media(max-width : 1000px){
     nav{
         padding : 0 20px;
     }
 
     .nav__link li{
-        padding : 10px;    
+        padding : 10px;
     }
-    
+
+    section.about > img,
+    section.whyUs .content-section img{
+        transform : scale(0.7)!important;
+    }
+
+    section.whyUs .content-section{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    section.our-product .img-wrapper .img-wrapper1 > img:nth-child(1),
+    section.our-product .img-wrapper .img-wrapper2 > img:nth-child(1),
+    section.our-product .img-wrapper .img-wrapper3 > img:nth-child(1),
+    section.our-product .img-wrapper .img-wrapper4 > img:nth-child(1),
+    section.our-product .img-wrapper .img-wrapper1 > img:nth-child(3),
+    section.our-product .img-wrapper .img-wrapper2 > img:nth-child(3),
+    section.our-product .img-wrapper .img-wrapper3 > img:nth-child(3),
+    section.our-product .img-wrapper .img-wrapper4 > img:nth-child(3)
+    {
+        display : none;
+    }
 }
